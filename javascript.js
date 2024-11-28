@@ -15,19 +15,22 @@
 
 const userRoute = Number(prompt("inserisci la distanza che devi percorrere (in KM)"));
 const userAge = Number(prompt("ok, ti interessano gli sconti? spero di si... quanto giovane sei? (in anni)"));
-const kmValue = Number( userTrace * 0.21 );
+const kmValue = Number(userRoute * 0.21);
 let ticketPrice;
 
 
 if (!userAge || !userRoute) {
     prompt("hai sicuramente messo uno spazio o delle lettere, questa è robba sseria non cinesate. Riaggiorna la pagina e reinserisci tutto da capo...");
 }
- else if (userAge > 17) {
+ else if (17 > userAge) {
     ticketPrice = kmValue - kmValue * 20 / 100;
 }
- else if (userAge > 64) {
+ else if (64 < userAge) {
     ticketPrice = kmValue - kmValue * 40 / 100;
 }
+ else {
+    ticketPrice = kmValue
+}
 
-
+prompt(`ok il prezzo del biglietto è di ${ticketPrice.toFixed(2)}$ `)
 
