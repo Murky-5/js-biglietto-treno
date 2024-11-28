@@ -17,6 +17,7 @@ const userRoute = Number(prompt("inserisci la distanza che devi percorrere (in K
 const userAge = Number(prompt("ok, ti interessano gli sconti? spero di si... quanto giovane sei? (in anni)"));
 const kmValue = Number(userRoute * 0.21);
 let ticketPrice;
+let couponType;
 
 
 if (!userAge || !userRoute) {
@@ -24,13 +25,18 @@ if (!userAge || !userRoute) {
 }
  else if (17 > userAge) {
     ticketPrice = kmValue - kmValue * 20 / 100;
+    couponType = "il 20% di sconto"
 }
  else if (64 < userAge) {
     ticketPrice = kmValue - kmValue * 40 / 100;
+    couponType = "il 40% di sconto"
 }
  else {
     ticketPrice = kmValue
+    couponType = "Nessun Coupon"
 }
 
-prompt(`ok il prezzo del biglietto è di ${ticketPrice.toFixed(2)}$ `)
+prompt(`ok il prezzo del biglietto è di ${ticketPrice.toFixed(2)}$ (è stato applicato ${couponType} alla spesa)`)
+
+
 
