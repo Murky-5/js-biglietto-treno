@@ -5,7 +5,7 @@
 
 
 /* 
-1 - chiedo all'utente di inserire la distanza che deve percorrere in kilometri.
+1 - chiedo all'utente di inserire la distanza che deve percorrere in kilometri (ed applico il costo per kilometro sulla distanza inserita).
 2 - chiedo all'utente di inserire la propria età.
 3 - SE l'età OPPURE i kilometri non contengono solo numeri o contengono lettere allora chiedo all'utente di non inserire spazi ne caratteri al di fuori dei numeri, e di riaggiornare la pagina.
   - ALTRIMENTI verifico SE l'età del suddetto arriva hai i 65 anni, se si applico lo sconto che gli spetta con il calcolo ( datoUtente - datoUtente * 40 / 100 ) per ottenere il 40% in meno.
@@ -13,4 +13,7 @@
 4 - in fine lo informo di quanto gli costerebbe percorrere i suddetti kilometri.
 */
 
+let userRoute = Number(prompt("inserisci la distanza che devi percorrere (in KM)"));
+let userAge = Number(prompt("ok, ti interessano gli sconti? spero di si... quanto giovane sei? (in anni)"));
+const kmValue = Number( userTrace * 0.21 );
 
